@@ -42,7 +42,7 @@ public class AimTraining extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		img = new Texture("crosshair.png");
 
 		//target rectangle on x=500, y=500 as a start point, also the same height and width with my texture/objcets
 		target_rect = new Rectangle(500,
@@ -62,20 +62,20 @@ public class AimTraining extends ApplicationAdapter {
 		font.setColor(Color.WHITE);
 		font.getData().setScale(5);
 
+
 		startGame();
 		startTimer();
 	}
 
 	@Override
 	public void render () {
-
 		if (secondsLeft <= 0 ){
 			gameOver = true;
 
 		}
 
 		//clearing the background
-		ScreenUtils.clear(1, 0, 0, 1);
+		ScreenUtils.clear(0, 0, 1, 1);
 
 		batch.begin();
 
